@@ -1,32 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>CKEditor 5 – Document editor</title>
-    <script src="https://cdn.ckeditor.com/ckeditor5/40.1.0/decoupled-document/ckeditor.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KharlAbban | Homepage</title>
+  <link rel="icon" type="image/png" href="assets/media/logo_square_text_full-80x80.jpg">
+  <!-- Styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link rel="stylesheet" href="assets/styles/project.css">
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="assets/scripts/index.js" defer></script>
 </head>
+
 <body>
-    <h1>Document editor</h1>
 
-    <!-- The toolbar will be rendered in this container. -->
-    <div id="toolbar-container"></div>
-
-    <!-- This container will become the editable. -->
-    <div id="editor">
-        <p>This is the initial editor content.</p>
+  <!-- Reusable Navbar -->
+  <nav class="navbar navbar-expand-md pageTopNav py-0 sticky-top" role="navigation" aria-label="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand skeleton" href="#">
+        <img src="assets/media/logo_large_text_full-300x100.png" height="78" alt="KharlAbban">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pageTopNavMenuItems" aria-controls="pageTopNavMenuItems" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="pageTopNavMenuItems">
+        <ul class="navbar-nav ms-5 gap-lg-3 skeleton">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All Projects</a></li>
+              <li><a class="dropdown-item" href="projects.html">Find A Project</a></li>
+              <li><a class="dropdown-item" href="projects.html">Submit A Project</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <button class="topNavGITBtn btn btn-lg ms-auto d-none d-lg-block skeleton">
+          <a href="contact.html">Get In Touch</a>
+        </button>
+      </div>
     </div>
+  </nav>
 
-    <script>
-        DecoupledEditor
-            .create( document.querySelector( '#editor' ) )
-            .then( editor => {
-                const toolbarContainer = document.querySelector( '#toolbar-container' );
+  <!-- Project Details -->
+  <section class="project-info mx-auto">
+    <div class="container">
+        <main class="project-details float-end px-1">
+            <!-- Breadcrumb -->
+            <nav style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                  <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Project Name</li>
+                </ol>
+            </nav>
+            <h2 class="project-name">#<span class="project-id">455</span>: Project Name</h2>
+            <p>Status: <span class="status">Completed</span> <br> Tags: <span class="tags">Sports, Basketball, Fitness</span></p>
 
-                toolbarContainer.appendChild( editor.ui.view.toolbar.element );
-            } )
-            .catch( error => {
-                console.error( error );
-            } );
-    </script>
+            <h6 class="text-decoration-underline">Description: </h6>
+            <p class="project-desc">Quas placeat magnam eum omnis assumenda excepturi quibusdam, eveniet, harum fugit, dolorem quis voluptates saepe sequi ullam eius voluptate alias esse veniam. Doloribus, totam beatae dolores, recusandae quis blanditiis non qui maiores vero nostrum repellendus.</p>
+            <!-- Button Group -->
+            <div class="btn-group mx-auto w-100" role="group" aria-label="Project Details Buttons">
+                <button type="button" class="btn project-live-btn">View Site Live</button>
+                <button type="button" class="btn project-github-btn">Check On GitHub</button>
+            </div>
+
+        </main>
+    </div>
+  </section>
+
+  <div class="copyright-section skeleton fixed-bottom">
+    <div class="row">
+      <div class="col offset-2 d-flex align-items-center fs-4">
+        Copyright &copy; <span id="year"></span> | KharlAbban
+      </div>
+    </div>
+  </div>
 </body>
+
 </html>
