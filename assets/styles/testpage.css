@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+}
+button {
+  margin: 1rem;
+  font-size: 1.5rem;
+}
+.btn {
+  --bg-color: #E3E3E3;
+  background-color: var(--bg-color);
+  color: #222;
+  padding: .5em 1em;
+  border: none;
+  outline: none;
+  position:relative;
+  cursor: pointer;
+}
+.btn.btn-border-pop {}
