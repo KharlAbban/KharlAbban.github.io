@@ -1,31 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;500;600;700&display=swap');
-
-* {
-  font-family: 'Josefin Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  --lt-main-bg-color: #f6f6f6;
-  --lt-secondary-bg-color: #D8D8D8;
-  --lt-text-color: #07090F;
-  --lt-component-bg: #185177;
-  --lt-component-bg-2: #EF7706;
-  --lt-navbar-bg-color: #ffffff;
-  --dt-main-bg-color: #07090F;
-  --dt-secondary-bg-color: #13192A;
-  --dt-text-color: #F6F6F6;
-  --dt-component-bg: #EF7706;
-  --dt-component-bg-2: #185177;
-  --dt-navbar-bg-color: #171213;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
+@import url("universal.css");
 body {
-  font-family: 'Great Vibes', 'Josefin Sans', sans-serif;
-  background-color: var(--lt-main-bg-color);
   position: absolute;
   top: 0;
   left: 0;
@@ -33,62 +7,6 @@ body {
   height: 100%;
   overflow-x: hidden;
 }
-
-/* NavBar Styles */
-nav.pageTopNav {
-  background-color: var(--lt-navbar-bg-color);
-  height: 80px;
-  box-shadow: 0 5px 9px rgba(0, 0, 0, 0.7);
-}
-nav.pageTopNav .topNavGITBtn {
-  background-color: var(--lt-component-bg);
-  font-weight: 600;
-}
-nav.pageTopNav .topNavGITBtn a {
-  color: var(--dt-text-color);
-  text-decoration: none;
-  border: none;
-}
-#pageTopNavMenuItems ul {
-  font-size: 1.25rem;
-}
-#pageTopNavMenuItems ul li.active{
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.copyright-section {
-  height: 40px;
-  background: var(--lt-component-bg);
-  color: var(--dt-text-color);
-}
-
-/* SKELETON */
-.skeleton {
-  position: relative;
-}
-.skeleton::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  background: linear-gradient(90deg, #eee,#c4c4c4, #eee);
-  background-size: 200%;
-  animation: skeleton 1s infinite reverse;
-}
-
-@keyframes skeleton {
-  0% {
-    background-position: -100% 0;
-  }
-  100% {
-    background-position: 100% 0;
-  }
-}
-
 .project-info {
   width: 70%;
   height: 70%;
@@ -105,7 +23,11 @@ nav.pageTopNav .topNavGITBtn a {
   width: 40%;
   height: 80%;
   right: 2rem;
-  background: var(--lt-main-bg-color);
+  background: var(--main-bg-color);
+  overflow-y: auto;
+}
+.project-details::-webkit-scrollbar {
+  display: none;
 }
 .project-details p {
   line-height: 1.5rem;
@@ -114,10 +36,10 @@ nav.pageTopNav .topNavGITBtn a {
   font-size: 0.9rem;
 }
 .project-live-btn {
-  background: var(--lt-component-bg);
-  color: var(--dt-text-color);
+  background: var(--component-bg);
+  color: var(--text-color);
 }
 .project-github-btn {
-  background: var(--lt-component-bg-2);
-  color: var(--lt-text-color);
+  background: var(--component-bg-2);
+  color: var(--text-color);
 }

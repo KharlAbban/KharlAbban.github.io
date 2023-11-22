@@ -1,32 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;500;600;700&display=swap');
-
-* {
-  font-family: 'Josefin Sans', sans-serif;
-  margin: 0;
-  padding: 0;
-  --lt-main-bg-color: #f6f6f6;
-  --lt-secondary-bg-color: #D8D8D8;
-  --lt-text-color: #07090F;
-  --lt-component-bg: #185177;
-  --lt-component-bg-2: #EF7706;
-  --lt-navbar-bg-color: #ffffff;
-  --dt-main-bg-color: #07090F;
-  --dt-secondary-bg-color: #13192A;
-  --dt-text-color: #F6F6F6;
-  --dt-component-bg: #EF7706;
-  --dt-component-bg-2: #185177;
-  --dt-navbar-bg-color: #171213;
-}
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-html {
-  scroll-behavior: smooth;
-}
-body {
-  font-family: 'Great Vibes', 'Josefin Sans', sans-serif;
-  background-color: var(--lt-main-bg-color);
-}
+@import url("universal.css");
 .hp-project-col {
   height: 200px;
   border: 1px solid rgba(0, 0, 0, 0.8);
@@ -34,7 +6,7 @@ body {
   background-size: cover;
 }
 .tech-used {
-  background: var(--lt-secondary-bg-color);
+  background: var(--secondary-bg-color);
   height: 100px;
 }
 .tech-used img {
@@ -47,16 +19,16 @@ body {
   font-size: 1.5rem;
 }
 .project-search-form button {
-  background: var(--lt-component-bg);
-  color: var(--lt-navbar-bg-color);
+  background: var(--component-bg);
+  color: var(--navbar-bg-color);
   transition: 0.2s ease;
 }
 .project-search-form button:hover {
-  background: var(--lt-component-bg-2);
+  background: var(--component-bg-2);
   color: var(--lt-text-color);
 }
 .search-box {
   top: -2.5rem;
-  background: var(--lt-secondary-bg-color);
+  background: var(--secondary-bg-color);
   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.7);
 }
