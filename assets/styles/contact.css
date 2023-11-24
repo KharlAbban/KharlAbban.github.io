@@ -4,7 +4,7 @@ body {
 }
 .contact-submit-btn {
   background: var(--component-bg);
-  color: var(--text-color);
+  color: var(--text-color-2);
 }
 #map {
   height: 220px;

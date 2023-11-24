@@ -1,12 +1,15 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
-body {
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   margin: 0;
+} */
+.navbar-brand img {
+  height: 70px;
 }
 button {
   margin: 1rem;

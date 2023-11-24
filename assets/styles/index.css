@@ -8,7 +8,7 @@
   background-size: cover;
 }
 .hero-section h1 {
-  color: var(--text-color-2);
+color: var(--text-color-constant);
 font-size: 3.2rem;
 width: 60%; 
 font-weight: 700;
@@ -16,11 +16,19 @@ font-weight: 700;
 .hero-content-box p {
   width: 40%;
   font-weight: normal;
-  color: var(--text-color-2);
+  color: var(--text-color-constant);
 }
-.hero-cta-btn {
-  background: var(--component-bg);
+.hero-section .hero-cta-btn {
+  background-color: var(--component-bg);
+  font-weight: 600;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  z-index: 1;
+}
+.hero-section .hero-cta-btn a {
   color: var(--text-color-2);
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
 }
 .section-header h1 {
   text-decoration: underline;
@@ -44,4 +52,65 @@ font-weight: 700;
   border: 1px solid rgba(0, 0, 0, 0.8);
   background: url("../media/logo_large_text_full-removebg-preview.png") no-repeat center center;
   background-size: cover;
+}
+
+/* Hover Animations for all buttons */
+.hero-section .hero-cta-btn::before {
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: -1;
+  background: var(--component-bg-2);
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.hero-cta-btn:hover::before,
+.hero-cta-btn:focus::before {
+  transform: scaleX(1);
+}
+.hero-cta-btn:hover a,
+.hero-cta-btn:focus a {
+  color: var(--text-color);
+}
+
+.hp-projects-filters button {
+  transition: all 0.3s ease-in-out;
+  border-color: var(--text-color);
+}
+.hp-projects-filters button:hover,
+.hp-projects-filters button:focus {
+  background: var(--component-bg-2);
+}
+/* End of hover animations */
+
+@media screen and (max-width: 992px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .hot-on-the-block {
+    max-height: 450px;
+    text-overflow: ellipsis;
+  }
+  .hot-description {
+    font-size: 0.9rem;
+    max-height: 170px;
+    overflow: scroll;
+    scrollbar-width: none;
+  }
+  .hot-description::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-brand img {
+    height: 70px;
+  }
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
 }

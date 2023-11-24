@@ -17,16 +17,17 @@ html {
 
 /* Body Universal Styles */
 body {
-    width: 100%;
     overflow-x: hidden;
     font-family: 'Josefin Sans', sans-serif;
     --main-bg-color: #f6f6f6;
     --secondary-bg-color: #D8D8D8;
     --text-color: #07090F;
+    --text-color-constant: #F6F6F6;
     --text-color-2: #F6F6F6;
     --component-bg: #185177;
     --component-bg-2: #EF7706;
     --navbar-bg-color: #ffffff;
+    --primary-hover-bg: #13192A;
     background: var(--main-bg-color);
     color: var(--text-color);
 }
@@ -39,31 +40,109 @@ body.dark-theme {
     --component-bg-2: #185177;
     --navbar-bg-color: #171213;
 }
+body.dark-theme .hp-projects-filters button {
+  color: var(--text-color);
+  border-color: var(--text-color);
+}
 /* End of Body Styles */
 
 /* Nav Styles */
+body.dark-theme .dropdown-menu.show {
+  background: var(--navbar-bg-color);
+}
+body.dark-theme .dropdown-menu li:hover a,
+body.dark-theme .dropdown-menu li:hover a {
+  color: var(--navbar-bg-color) !important;
+}
 nav.pageTopNav {
     background-color: var(--navbar-bg-color);
-    height: 80px;
     box-shadow: 0 5px 9px rgba(0, 0, 0, 0.7);
   }
-  nav.pageTopNav .topNavGITBtn {
+  .GITBtn {
     background-color: var(--component-bg);
     font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    z-index: 1;
   }
-  nav.pageTopNav .topNavGITBtn a {
+  .GITBtn a {
     color: var(--text-color-2);
     text-decoration: none;
-    border: none;
+    transition: color 0.3s ease-in-out;
   }
   #pageTopNavMenuItems ul {
     font-size: 1.25rem;
+  }
+  #pageTopNavMenuItems ul li a {
+    color: var(--text-color);
   }
   #pageTopNavMenuItems ul li.active{
     font-size: 1.5rem;
     font-weight: 700;
   }
-/* End of Nav Styles */
+  /* End of Nav Styles */
+  
+  /* Hover Animations for all buttons */
+  .hp-footer-social a:hover {
+    transform: scale(1.2);
+  }
+
+  .GIT-yellow {
+    --border-size: 2px;
+    background-color: var(--component-bg-2);
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    border: none;
+    z-index: 1;
+  }
+  .GIT-yellow a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
+
+  .GIT-yellow::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: var(--border-size) solid var(--component-bg-2);
+    z-index: -1;
+    transition: top, left, right, bottom, 0.1s ease-in-out;
+  }
+  .GIT-yellow:hover::before,
+  .GIT-yellow:focus::before {
+    top: calc(var(--border-size) * -2);
+    left: calc(var(--border-size) * -2);
+    right: calc(var(--border-size) * -2);
+    bottom: calc(var(--border-size) * -2);
+  }
+
+
+  .GITBtn::before {
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+    background: var(--component-bg-2);
+    transition: transform 0.3s ease-in-out;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  .GITBtn:hover::before,
+  .GITBtn:focus::before {
+    transform: scaleX(1);
+  }
+  .GITBtn:hover a,
+  .GITBtn:focus a {
+    color: var(--text-color);
+  }
+  /* End of hover animations */
 
 /* Footer and Copyright */
 .hp-footer {
@@ -81,8 +160,9 @@ nav.pageTopNav {
     color: var(--text-color);
   }
   .hp-footer-social a {
+    color: var(--component-bg);
     text-decoration: none;
-    color: inherit;
+    transition: color 0.3s ease-in-out;
   }
   
 /* End of Copyright */
@@ -94,7 +174,7 @@ nav.pageTopNav {
     background-blend-mode: multiply;
     background-size: cover;
     background-attachment: fixed;
-    color: var(--text-color-2);
+    color: var(--text-color-constant);
   }
   .smam-first-col {
     border-right: 5px solid var(--navbar-bg-color);
@@ -114,6 +194,9 @@ nav.pageTopNav {
   .nb {
     border: none;
   }
+  .btn {
+    border-radius: 0;
+  }
 /* End of Misc Styles */
 
 /* Image Banner Styles */
@@ -131,7 +214,7 @@ nav.pageTopNav {
   }
   .banner-large .banner-logo-heading {
     font-family: 'Great Vibes', "Josefin Sans", sans-serif;
-    font-size: 6.2rem;
+    font-size: 6rem;
     letter-spacing: .3rem;
   }
   .banner-logo-heading {
@@ -141,7 +224,8 @@ nav.pageTopNav {
   }
   .banner-tagline-text {
     font-size: 2.5rem;
-    border-left: 5px solid var(--navbar-bg-color);
+    border-left: 5px solid var(--text-color-constant);
+    color: var(--text-color-constant);
   }
 /* End of Image Banner Styles */
 
@@ -180,6 +264,19 @@ nav.pageTopNav {
     background-color: rgba(0, 0, 0, 0.8);
     background-blend-mode: multiply;
     background-size: cover;
-    color: var(--text-color-2);
+    color: var(--text-color-constant);
   }
   /* End of Subpage Title Section */
+
+  /* Media Queries */
+@media screen and (max-width: 992px) {
+  .smam-first-col {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .banner-large .banner-logo-heading {
+    font-size: 5.5rem;
+  }
+}
+  /* End of Media Queries */

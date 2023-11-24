@@ -21,11 +21,11 @@
   background-attachment: fixed;
 }
 .what-i-do .section-header h1 {
-  border-bottom: 5px solid var(--text-color-2);
-  color: var(--text-color-2);
+  border-bottom: 5px solid var(--text-color-constant);
+  color: var(--text-color-constant);
 }
 .wid-col {
-  background: var(--navbar-bg-color);
+  background: var(--secondary-bg-color);
   border-radius: .5rem;
   height: 200px;
   display: flex;
@@ -38,7 +38,7 @@
 }
 .stats-section {
   background: rgba(0,0,0, 0.8);
-  color: var(--text-color-2);
+  color: var(--text-color-constant);
 }
 .stats-section h3 {
   text-align: center;
@@ -48,4 +48,16 @@
 }
 .section-main .hih-col {
   border-right: 5px solid var(--component-bg);
+}
+
+@media screen and (max-width: 992px) {
+  .stats-section h3 {
+    border-right: none;
+  }
+  .section-main .hih-col {
+    border-right: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  
 }

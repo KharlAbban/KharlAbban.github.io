@@ -32,3 +32,17 @@
   background: var(--secondary-bg-color);
   box-shadow: 0 5px 9px rgba(0, 0, 0, 0.7);
 }
+.hp-projects-filters button {
+  transition: all 0.3s ease-in-out;
+  border-color: var(--text-color);
+}
+.hp-projects-filters button:hover,
+.hp-projects-filters button:focus {
+  background: var(--component-bg-2);
+}
+
+@media screen and (max-width: 768px) {
+  .tech-used img {
+    height: 50px !important;
+  }
+}
