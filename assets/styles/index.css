@@ -48,13 +48,54 @@ font-weight: 700;
   background: var(--component-bg-2);
 }
 .hp-project-col {
-  height: 200px;
-  border: 1px solid rgba(0, 0, 0, 0.8);
-  background: url("../media/logo_large_text_full-removebg-preview.png") no-repeat center center;
+  min-height: 200px;
+  max-height: 210px;
+}
+.sample-project-display {
+  background: url("../media/banner-img.jpg");
   background-size: cover;
+  transition: 0.4s ease-in-out;
+}
+.sample-project-display:hover .project-display-details {
+  transform: scaleX(1);
+}
+.project-display-details {
+  transition: 0.4s ease-in-out;
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--text-color-constant);
+  transform: scaleX(0);
+  transform-origin: left;
 }
 
+
+
 /* Hover Animations for all buttons */
+.project-details-btn {
+  color: var(--text-color-constant);
+  background: var(--component-bg-2);
+}
+.project-details-btn::before {
+  --border-size: 5px;
+  content: "";
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: var(--border-size);
+  background: var(--component-bg);
+  position: absolute;
+  transition: transform 0.3s ease-in-out;
+  /* transform-origin: left; */
+  transform: scaleX(0);
+}
+.project-details-btn:hover::before,
+.project-details-btn:focus::before {
+  transform: scaleX(1);
+}
+.project-details-btn:hover,
+.project-details-btn:focus {
+  font-size: 1.1rem;
+}
+
 .hero-section .hero-cta-btn::before {
   content: "";
   top: 0;

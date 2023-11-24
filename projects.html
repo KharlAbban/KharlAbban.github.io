@@ -26,6 +26,10 @@
 </head>
 
 <body>
+  <div class="mode-toggle">
+    <i class="fa-solid fa-moon fa-2x"></i>
+    <i class="fa-solid fa-sun fa-2x d-none"></i>
+  </div>
 
   <!-- Reusable Navbar -->
   <nav class="navbar navbar-expand-md pageTopNav py-0 sticky-top" role="navigation" aria-label="navbar">
@@ -96,37 +100,213 @@
     <div class="container">
       <main>
         <div class="sample-projects-top-nav d-flex justify-content-between mt-lg-2 mb-lg-4 skeleton">
-          <a href="" class="see-more-like-this my-auto">See More Like This</a>
-            <div class="btn-group hp-projects-filters" role="group" aria-label="Sample Projects Filters">
+            <div class="btn-group hp-projects-filters my-3" role="group" aria-label="Sample Projects Filters">
               <button type="button" class="btn">All</button>
               <button type="button" class="btn">Ongoing</button>
               <button type="button" class="btn">Completed</button>
             </div>
         </div>
-        <div class="container hp-projects-container mt-3 mt-lg-1">
-          <div class="row hp-projects-row gap-2 skeleton mb-2">
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-          </div>
-          <div class="row hp-projects-row gap-2 skeleton mb-2">
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-          </div>
-          <div class="row hp-projects-row gap-2 skeleton mb-2">
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-          </div>
-          <div class="row hp-projects-row gap-2 skeleton mb-2">
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
-            <div class="col hp-project-col"></div>
+        <div class="container-fluid hp-projects-container">
+          <!-- <div class="row hp-projects-row gap-2 skeleton mb-2"> -->
+          <div class="row row-cols-3 hp-projects-row skeleton mb-2">
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col hp-project-col p-2">
+              <div class="sample-project-display h-100">
+                <div class="project-display-details h-100 d-flex flex-column justify-content-center align-items-center px-2">
+                  <h2 class="project-name text-center">Project Name</h2>
+                  <div class="btn-group gap-2 my-2 w-100" role="group" aria-label="Sample Project Detail Buttons">
+                    <button type="button" class="btn project-details-btn">View Live</button>
+                    <button type="button" class="btn project-details-btn">See Source</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </main>

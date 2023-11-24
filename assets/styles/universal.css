@@ -15,30 +15,53 @@ html {
 
 /* End Of Boilerplate */
 
+/* Mode Toggle */
+.mode-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  background: rgba(18, 24, 41, 0.5);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+}
+.mode-toggle:hover,
+.mode-toggle:focus {
+  background: var(--primary-hover-bg);
+  color: var(--text-color-constant);
+}
+/* End of Mode Toggle */
+
 /* Body Universal Styles */
 body {
-    overflow-x: hidden;
-    font-family: 'Josefin Sans', sans-serif;
-    --main-bg-color: #f6f6f6;
-    --secondary-bg-color: #D8D8D8;
-    --text-color: #07090F;
-    --text-color-constant: #F6F6F6;
-    --text-color-2: #F6F6F6;
-    --component-bg: #185177;
-    --component-bg-2: #EF7706;
-    --navbar-bg-color: #ffffff;
-    --primary-hover-bg: #13192A;
-    background: var(--main-bg-color);
-    color: var(--text-color);
+  transition: all 0.3s ease-in-out;
+  overflow-x: hidden;
+  font-family: 'Josefin Sans', sans-serif;
+  --main-bg-color: #f6f6f6;
+  --secondary-bg-color: #D8D8D8;
+  --text-color: #07090F;
+  --text-color-constant: #F6F6F6;
+  --text-color-2: #F6F6F6;
+  --component-bg: #185177;
+  --component-bg-2: #EF7706;
+  --navbar-bg-color: #ffffff;
+  --primary-hover-bg: #121829;
+  background: var(--main-bg-color);
+  color: var(--text-color);
 }
 body.dark-theme {
-    --main-bg-color: #07090F;
-    --secondary-bg-color: #13192A;
-    --text-color: #F6F6F6;
-    --text-color-2: #07090F;
-    --component-bg: #EF7706;
-    --component-bg-2: #185177;
-    --navbar-bg-color: #171213;
+  --main-bg-color: #07090F;
+  --secondary-bg-color: #13192A;
+  --text-color: #F6F6F6;
+  --text-color-2: #07090F;
+  --component-bg: #EF7706;
+  --component-bg-2: #185177;
+  --navbar-bg-color: #171213;
 }
 body.dark-theme .hp-projects-filters button {
   color: var(--text-color);
