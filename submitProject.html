@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KharlAbban | Projects Page</title>
+  <link rel="icon" type="image/png" href="assets/media/logo_square_text_full-80x80.jpg">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.5.5/css/simple-line-icons.min.css">
+  <link rel="stylesheet" href="assets/styles/universal.css">
+  <link rel="stylesheet" href="assets/styles/submitProject.css">
+
+  <!-- Scripts -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="assets/scripts/universal.js" defer></script>
+  <script src="assets/scripts/submitProject.js" defer></script>
+</head>
+
+<body>
+  <div class="mode-toggle">
+    <i class="fa-solid fa-moon fa-2x"></i>
+    <i class="fa-solid fa-sun fa-2x d-none"></i>
+  </div>
+
+  <!-- Reusable Navbar -->
+  <nav class="navbar navbar-expand-md pageTopNav py-0 sticky-top" role="navigation" aria-label="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand skeleton" href="#">
+        <img src="assets/media/logo_large_text_full-removebg.png" height="78" alt="KharlAbban">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#pageTopNavMenuItems"
+        aria-controls="pageTopNavMenuItems" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="pageTopNavMenuItems">
+        <ul class="navbar-nav ms-5 gap-lg-3 skeleton">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="active nav-link dropdown-toggle fw-bold" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false" aria-current="page">Projects</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="projects.html">All Projects</a></li>
+              <li><a class="dropdown-item" href="projects.html">Find A Project</a></li>
+              <li><a class="dropdown-item" href="submitProject.html">Submit A Project</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Subpage Title w/ bg image -->
+  <section class="subpage-title-section d-flex align-items-center skeleton">
+    <div class="container">
+      <div class="sub-title-box">
+        <h1 class="mb-lg-2 text-center">SUBMIT A PROJECT ✨</h1>
+        <p class="text-center">Use the form below to fill out and add a new project to a public folder.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Submit A Project Form -->
+  <section class="contact-form-section my-2 pt-3">
+    <div class="container">
+        <form class="row g-3 needs-validation" novalidate method="post" action="">
+            <div class="col-md-4">
+                <label for="name" class="form-label">Project Name*</label>
+                <input type="text" class="form-control" name="name" id="name" required>
+                <div class="valid-feedback">
+                Looks good!
+                </div>
+                <div class="invalid-feedback">
+                    Please enter a project name.
+                </div>
+            </div>
+            <div class="col-md-4">
+                <label for="projectID" class="form-label">Project ID</label>
+                <input type="number" min="1" class="form-control" name="projectID">
+            </div>
+            <div class="col-md-4">
+                <label for="category" class="form-label">Category*</label>
+                <select class="form-select" name="category" required>
+                    <option selected value="Business">Business</option>
+                    <option value="Sports">Sports</option>
+                </select>
+                <div class="invalid-feedback">
+                Please select a valid state.
+                </div>
+            </div>
+            <div class="col-md-6">
+                <label for="summary" class="form-label">Summary*</label>
+                <input type="text" class="form-control" name="summary" id="summary" required>
+                <div class="invalid-feedback">
+                Enter a summary of project.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="status" class="form-label">Status*</label>
+                <select class="form-select" id="status" required>
+                <option value="Yet to begin">Yet to begin</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Completed">Completed</option>
+                </select>
+                <div class="invalid-feedback">
+                Please select a valid option.
+                </div>
+            </div>
+            <div class="col-md-3">
+                <label for="author" class="form-label">Author*</label>
+                <input type="text" class="form-control" id="author" required>
+                <div class="invalid-feedback">
+                Please provide an author.
+                </div>
+            </div>
+            <div class="col-md-12 mb-3">
+                <label for="description">Description</label>
+                <textarea name="description" id="" class="form-select" cols="30" rows="10"></textarea>
+            </div>
+            <div class="col-md-4">
+                <label for="codeHub" class="form-label">CodeBase*</label>
+                <input type="text" class="form-control" name="codeHub" required>
+                <div class="invalid-feedback">Enter a code base, eg. a GitHub repo</div>
+            </div>
+            <div class="col-md-4">
+                <label for="liveSite" class="form-label">Live Site</label>
+                <input type="text" class="form-control" name="liveSite">
+            </div>
+            <div class="col-md-4">
+                <label for="author_email" class="form-label">Author Email*</label>
+                <input type="text" class="form-control" name="author_email" required>
+                <div class="invalid-feedback">You need to provide the author's email</div>
+            </div>
+            <div class="col-md-8">
+                <label for="image">Picture Background</label>
+                <input type="file" class="form-control" name="image" accept="image/*">
+            </div>
+            <div class="col-md-4">
+                <label for="client">Client</label>
+                <input type="text" class="form-control" name="client">
+            </div>
+            <div class="col-12 mb-5">
+                <button class="btn project-submit-btn w-100" type="submit">Submit form</button>
+            </div>
+        </form>
+    </div>
+  </section>
+
+  <!-- Copyright Section -->
+  <div class="copyright-section skeleton">
+    <div class="row">
+      <div class="col offset-2 d-flex align-items-center fs-4">
+        Copyright &copy; <span id="year"></span> | KharlAbban
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

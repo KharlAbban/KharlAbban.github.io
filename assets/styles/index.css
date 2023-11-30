@@ -74,6 +74,9 @@ font-weight: 700;
   color: var(--text-color-constant);
   background: var(--component-bg-2);
 }
+.project-details-btn a {
+  color: var(--text-color-constant);
+}
 .project-details-btn::before {
   --border-size: 5px;
   content: "";
