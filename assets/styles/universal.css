@@ -230,7 +230,7 @@ nav.pageTopNav {
     background-blend-mode: multiply;
     background-size: cover;
     background-attachment: fixed;
-    color: var(--text-color-2);
+    color: var(--text-color-constant);
   }
   .banner-large {
     height: 22vh;
