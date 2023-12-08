@@ -1,3 +1,4 @@
 const urlParam = new URLSearchParams(window.location.search);
-const greeting = urlParam.get("greeting");
-console.log(greeting);
+const projectId = urlParam.get("projectId");
+console.log(projectId);
+alert(projectId);
