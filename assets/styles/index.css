@@ -52,14 +52,16 @@ font-weight: 700;
   max-height: 210px;
 }
 .sample-project-display {
-  background: url("../media/banner-img.jpg");
-  background-size: cover;
+  border: 1px solid #000;
+  position: relative;
   transition: 0.4s ease-in-out;
 }
 .sample-project-display:hover .project-display-details {
   transform: scaleX(1);
 }
 .project-display-details {
+  position: absolute;
+  top: 0;bottom: 0;right: 0;left: 0;
   transition: 0.4s ease-in-out;
   background: rgba(0, 0, 0, 0.9);
   color: var(--text-color-constant);

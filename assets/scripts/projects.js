@@ -2,15 +2,10 @@ const projectsDiv = document.querySelector("#hp-projects-row");
 
 window.addEventListener("load", async () => {
 	try {
-		// const result = await fetch("https://kharlapi.onrender.com/api/projects/");
-		// const toJson = await result.json();
-		const result = await fetch(
-			"https://kharlapi.onrender.com/api/projects/projectImage-1701778468386.png"
-		);
-		const toBlob = await result.blob();
-		console.log(toBlob);
+		const result = await fetch("https://kharlapi.onrender.com/api/projects/");
+		const toJson = await result.json();
 
-		// const projects = toJson.projectList;
+		const projects = toJson.projectList;
 		console.log(projects);
 
 		projects.forEach((project) => {
@@ -24,16 +19,16 @@ window.addEventListener("load", async () => {
 	}
 });
 
-async function createProjectElement(project) {
+function createProjectElement(project) {
 	let projectElement = document.createElement("div");
 	projectElement.classList.add("col", "hp-project-col", "p-2");
 	let projDisplayDiv = document.createElement("div");
 	projDisplayDiv.classList.add("sample-project-display", "h-100");
-	// projDisplayDiv.style.backgroundImage = await fetch(
-	// 	`https://kharlapi.onrender.com/api/projects/${project.imageName}`
-	// );
+	let projectDisplayImg = document.createElement("img");
+	projectDisplayImg.src = project.imageurl;
+	projectDisplayImg.classList.add("img-fluid","w-100","h-100");
 	let projDetailsDiv = document.createElement("div");
-	projDisplayDiv.classList.add(
+	projDetailsDiv.classList.add(
 		"project-display-details",
 		"h-100",
 		"d-flex",
@@ -47,17 +42,22 @@ async function createProjectElement(project) {
 	projName.textContent = project.name;
 	let projBtnsDiv = document.createElement("div");
 	projBtnsDiv.classList.add("btn-group", "gap-2", "my-2", "w-100");
-	let projBtnOne = document.createElement("button");
+	let projBtnOne = document.createElement("a");
 	projBtnOne.classList.add("btn", "project-details-btn");
+	projBtnOne.href = "https://" + project.liveSite;
+	projBtnOne.target = "_blank";
 	projBtnOne.textContent = "View Live";
-	let projBtnTwo = document.createElement("button");
+	let projBtnTwo = document.createElement("a");
 	projBtnTwo.classList.add("btn", "project-details-btn");
+	projBtnTwo.href = "https://" + project.codeHub;
+	projBtnTwo.target = "_blank";
 	projBtnTwo.textContent = "See Source";
 
 	projBtnsDiv.appendChild(projBtnOne);
 	projBtnsDiv.appendChild(projBtnTwo);
 	projDetailsDiv.appendChild(projName);
 	projDetailsDiv.appendChild(projBtnsDiv);
+	projDisplayDiv.appendChild(projectDisplayImg);
 	projDisplayDiv.appendChild(projDetailsDiv);
 	projectElement.appendChild(projDisplayDiv);
 
