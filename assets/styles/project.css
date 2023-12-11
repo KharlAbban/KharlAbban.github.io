@@ -12,10 +12,22 @@ body {
   height: 70%;
   position: relative;
   top: 4%;
-  background: url("../media/jumbotron_bg.jpg") center center;
   background-color: rgba(0, 0, 0, 0.6);
   background-blend-mode: multiply;
   background-size: cover;
+}
+.project-info img {
+  height: inherit;
+  width: 100%;
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
 }
 .project-details {
   position: absolute;
@@ -55,4 +67,14 @@ body {
   .project-details {
     width: 80%;
   }
+}
+.project-live-btn,
+.project-github-btn {
+  transition: 0.3s ease-in-out;
+}
+.project-live-btn:hover {
+  background-color: #163b54;
+}
+.project-github-btn:hover {
+  background-color: #81450c;
 }

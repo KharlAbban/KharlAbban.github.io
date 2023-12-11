@@ -68,8 +68,9 @@
   </nav>
 
   <!-- Project Details -->
-  <section class="project-info mx-auto skeleton">
-    <div class="container">
+  <section class="project-info mx-auto skeleton position-relative">
+    <img src="assets/media/defaultWebsiteImage.jpg" class="h-100 detImg" alt="">
+    <div class="container overlay">
       <main class="project-details float-end px-1 pb-2 skeleton">
         <!-- Breadcrumb -->
         <nav class="project-mini-nav"
@@ -78,21 +79,18 @@
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
             <li class="breadcrumb-item"><a href="projects.html">Projects</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Project Name</li>
+            <li class="breadcrumb-item active" aria-current="page" id="crumbProjName">Project Name</li>
           </ol>
         </nav>
-        <h2 class="project-name">#<span class="project-id">455</span>: Project Name</h2>
-        <p>Status: <span class="status">Completed</span> <br> Tags: <span class="tags">Sports, Basketball,
-            Fitness</span></p>
+        <h2 class="project-name">#<span class="project-id"></span>: <span id="detProjName"></span></h2>
+        <p>Status: <span class="status"></span> <br> Category: <span class="cats"></span></p>
 
         <h6 class="text-decoration-underline">Description: </h6>
-        <p class="project-desc">Quas placeat magnam eum omnis assumenda excepturi quibusdam, eveniet, harum fugit,
-          dolorem quis voluptates saepe sequi ullam eius voluptate alias esse veniam. Doloribus, totam beatae dolores,
-          recusandae quis blanditiis non qui maiores vero nostrum repellendus.</p>
+        <p class="project-desc"></p>
         <!-- Button Group -->
         <div class="btn-group mx-auto w-100" role="group" aria-label="Project Details Buttons">
-          <button type="button" class="btn project-live-btn">View Site Live</button>
-          <button type="button" class="btn project-github-btn">Check On GitHub</button>
+          <a href="" type="button" class="btn project-live-btn">View Site Live</a>
+          <a href="" type="button" class="btn project-github-btn">Check On GitHub</a>
         </div>
 
       </main>
