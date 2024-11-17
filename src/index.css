@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Sans:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ribeye+Marrow&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btn {
+    @apply flex relative items-center justify-center gap-2 bg-lt-sec-bg py-2 border-none outline-none px-4 font-semibold duration-100 transition-all ease-in-out
+}
+.btn-sm {
+    @apply px-3 py-1.5
+}
+
+.btnTypeOne {
+    @apply hover:text-lt-prim-text-color dark:hover:text-dt-prim-text-color text-lt-sec-text-color dark:text-dt-sec-text-color bg-lt-comp-bg dark:bg-dt-comp-bg hover:bg-transparent duration-150 ease-in-out transition-all before:content-[''] before:absolute before:inset-0 before:bg-lt-sec-bg dark:before:bg-dt-sec-bg before:scale-x-0 before:origin-left before:transition-transform before:duration-100 before:ease-in-out hover:before:scale-x-100
+}
+
+.btnTypeTwo {
+    @apply text-lt-prim-text-color dark:text-dt-prim-text-color bg-lt-sec-bg dark:bg-dt-sec-bg hover:bg-transparent duration-150 ease-in-out transition-all before:content-[''] before:absolute before:inset-0 before:border-lt-sec-bg dark:before:border-dt-sec-bg before:transition-all before:duration-100 before:ease-in-out hover:before:border-2 hover:before:-top-1 hover:before:-bottom-1 hover:before:-right-1 hover:before:-left-1
+}
+
+.navbar {
+    @apply fixed max-h-20 top-0 z-[999] p-4 flex justify-between items-center dark:bg-dt-nav-bg w-full bg-white shadow
+}
+
+.invert-text-color {
+    @apply text-lt-sec-text-color dark:text-dt-sec-text-color
+}
